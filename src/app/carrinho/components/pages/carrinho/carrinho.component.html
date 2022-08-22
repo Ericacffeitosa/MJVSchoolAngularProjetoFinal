@@ -1,0 +1,29 @@
+<h2>{{ titulo }}</h2>
+<div *ngIf="itens.length>0">
+<table class = "table">
+    <thead class = "table-active">
+        <tr>
+            <th>Curso</th>        
+            <th>Descrição</th>        
+            <th>Preço</th>
+            <th></th>                         
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of itens">
+            <td>{{item.nome}}</td>
+            <td>{{item.descricao}}</td>
+            <td>{{item.preco | currency: 'R$ '}}</td>
+            <td><button type="button" class="btn btn-outline-danger" (click) ="excluirItem(item)">Excluir</button></td> 
+        </tr>
+    </tbody>
+</table>
+    <br>    
+    <p><b>Total: </b><b>{{valorTotal()| currency: 'R$ '}}</b></p>
+    <br>    
+    <button type="button" class="btn btn-primary" (click)="limparCarrinho()">Limpar Carrinho</button>  
+</div>
+<div *ngIf="itens.length==0">
+<p>Carrinho Vazio</p>
+</div>
+

@@ -1,0 +1,7 @@
+<div *ngIf="curso">
+    <img src="{{curso.imagem}}"class="img-thumbnail" >
+    <p><b>{{curso.nome}}</b></p>
+    <p>{{curso.descricao}}</p>
+    <p><b>{{ curso.preco | currency: 'R$ '}}</b></p>
+    <button  type="button" class="btn btn-success" (click) = "addCarrinho()">Comprar</button>
+</div>

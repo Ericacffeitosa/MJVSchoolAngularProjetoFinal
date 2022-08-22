@@ -1,0 +1,17 @@
+.details {
+    width: 100%;
+    margin-top: 5px;
+}
+.curso {
+    margin:10px;
+    border: 1px solid #eeeeee;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+}
+.curso img {
+    width:250px;
+    height:150px;
+}

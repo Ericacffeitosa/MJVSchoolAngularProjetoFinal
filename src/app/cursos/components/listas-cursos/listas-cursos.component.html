@@ -1,0 +1,12 @@
+<h2>{{ titulo }}</h2>
+
+<div class="curso" *ngFor="let curso of cursos">
+    <img src="{{curso.imagem}}" class="img-thumbnail" >
+    <br>
+    <h3><b>{{curso.nome}}</b></h3>
+    <p>{{curso.descricao}}</p>
+    <p><b>{{ curso.preco | currency: 'R$ '}}</b></p>
+    
+    <button type="button" class="btn btn-light" (click)="exibirDetalhe(curso.id)">Detalhes</button>
+    <button type="button" class="btn btn-success" (click)="addCarrinho(curso)">Comprar</button>
+</div> 
